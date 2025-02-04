@@ -1,16 +1,11 @@
 import React, { useEffect, useRef, useState } from "react";
-import logo2 from "../assets/ccpurlogo2.png";
-import logo3 from "../assets/ccpurlogo3.png";
+import logo from "../assets/ccpurlogo.png";
 import { Link } from "react-router-dom";
 import {
-  FaArrowDown,
-  FaArrowUp,
   FaBars,
   FaChevronDown,
   FaChevronUp,
   FaTimes,
-  FaWineGlass,
-  FaXingSquare,
 } from "react-icons/fa";
 import { FiSearch } from "react-icons/fi";
 
@@ -25,21 +20,10 @@ const MainNavBar = () => {
   const [newsDropdown, setNewsDropdown] = useState(false);
   const [innovationDropdown, setInnovationDropdown] = useState(false);
   const [SecondAdmissionDropdown, setSecondAdmissionDropdown] = useState(false);
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-  const [scrollY, setScrollY] = useState(0);
-
-  // const toggleMenu = () => {
-  //   setMenuOpen(!menuOpen);
-  //   console.log("Menu state:", menuOpen);
-  // };
-
   const [isSearchVisible, setIsSearchVisible] = useState(false);
   const searchRef = useRef(null);
 
-  // const toggleMenu = () => {
-  //   setMenuOpen((prev) => !prev); // Toggle the menu open state
-  // };
-
+ 
   const toggleSearch = () => {
     setIsSearchVisible((prev) => !prev);
   };
@@ -156,7 +140,6 @@ const MainNavBar = () => {
         { title: "Department News", link: "/department-news" },
         { title: "Announcement", link: "/announcement" },
         { title: "Overall", link: "/overall" },
-       
       ],
     },
     {
@@ -167,20 +150,24 @@ const MainNavBar = () => {
         { title: "Examination Schedules", link: "/examination-schedules" },
         { title: "Examination Result", link: "/examination-result" },
         { title: "Examination News", link: "/examination-news" },
-        
       ],
     },
   ];
 
   return (
     <div className="w-full bg-white border-b shadow-md">
-      <div className="flex justify-between items-center px-3 lg:px-20">
+      <div className="flex justify-between items-center px-2 lg:px-20">
         <Link to="/" className="flex items-center">
           <img
-            src={logo2}
+            src={logo}
             alt="Churachandpur College Logo"
-            className="w-36  md:w-16 md:h-16 lg:w-52"
+            className="w-12  md:w-16 md:h-16 lg:w-16 "
           />
+          <div>
+            <h2 className="font-bold text-xs lg:text-lg text-gray-800">
+              CHURACHANDPUR COLLEGE (AUTONOMOUS)
+            </h2>
+          </div>
         </Link>
 
         <div className="flex pt-1 items-center h-16">
@@ -189,10 +176,7 @@ const MainNavBar = () => {
               key={button.id}
               className="relative hidden group h-full hover:text-gray-100 active:text-white hover:bg-sky-700 last:border-none  hover:rounded-t-lg lg:flex items-center"
             >
-              <button
-                
-                className="text-gray-900 active:hover:text-white border-gray-700 border-r  px-3 font-semibold hover:text-gray-100"
-              >
+              <button className="text-gray-900 active:hover:text-white border-gray-700 border-r  px-3 font-semibold hover:text-gray-100">
                 {button.title}
               </button>
 
@@ -228,7 +212,7 @@ const MainNavBar = () => {
               {/* Apply Now Button */}
               {!isSearchVisible && (
                 <Link
-                  to="/login-page"
+                  to="/signup-page"
                   className="bg-red-600 hidden lg:flex text-white py-2 px-5 text-sm md:text-md lg:px-4 lg:py-2 lg:text-md rounded-md font-medium hover:bg-red-700"
                 >
                   APPLY NOW
@@ -285,14 +269,20 @@ const MainNavBar = () => {
             </button>
             {menuOpen && (
               <div className="absolute lg:hidden top-0 right-0 w-72 h-screen z-20 bg-sky-700 text-gray-300">
-                <div className="flex flex-col gap-6 py-5 pt-[14px] items-start px-6 justify-center">
+                <div className="flex flex-col gap-6 py-5 pt-[12px] items-start px-6 justify-center">
                   <Link to="/" className="flex items-center">
                     <img
-                      src={logo3}
+                      src={logo}
                       alt="Churachandpur College Logo"
-                      className="w-40 h-12"
+                      className="w-14 h-14"
                     />
+                    <div>
+                      <h2 className="font-bold text-[7px] whitespace-nowrap text-gray-100">
+                        CHURACHANDPUR COLLEGE (AUTONOMOUS)
+                      </h2>
+                    </div>
                   </Link>
+
                   <button
                     onClick={admissionDropdownHandler}
                     className="font-semibold flex items-center gap-3 text-gray-300 hover:text-white"
@@ -677,22 +667,6 @@ const MainNavBar = () => {
                   <button className="lg:border-r font-semibold  border-gray-300 lg:px-3 border-solid hover:text-sky-500 leading-none align-middle py-1">
                     Student Login
                   </button>
-
-                  {/* {isLoggedIn ? (
-                <button
-                  onClick={logoutHandler}
-                  className="bg-red-600 py-2 px-7 text-white font-semibold rounded-lg"
-                >
-                  Logout
-                </button>
-              ) : (
-                <button
-                  onClick={LoginHandler}
-                  className="bg-green-500 py-2 px-5 text-wnormal rounded-lg"
-                >
-                  Student/Login
-                </button>
-              )} */}
                 </div>
               </div>
             )}

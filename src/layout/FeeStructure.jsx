@@ -6,12 +6,12 @@ const FeeStructure = () => {
   const [activeTab, setActiveTab] = useState(1); // Default active tab
 
   return (
-    <div className="w-full h-auto px-24 pt-32">
-        <h2 className="font-bold text-3xl md:text-2xl py-6 lg:text-3xl text-center">
+    <div className="w-full h-auto px-24 pt-12">
+        <h2 className="font-bold text-3xl md:text-2xl py-6 lg:text-3xl text-left">
             <span className="text-sky-500 font-medium ">Fee</span> Structure
           </h2>
       {/* Tabs */}
-      <div className="flex w-full px-32 pt-12 justify-around">
+      <div className="flex items-start w-full justify-start">
         <div className="flex flex-col border">
           <button
             className={`px-4 flex items-center gap-4 py-3 flex-1 text-start border w-80 font-bold text-xl ${

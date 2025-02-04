@@ -30,12 +30,19 @@ import ExaminationResults from "./layout/ExaminationResults";
 import ExaminationNews from "./layout/ExaminationNews";
 import SignupPage from "./components/SignupPage";
 import UserTypePage from "./components/UserTypePage";
-import ExistingSignup from "./components/ExistingSignup";
+import ForgotPasswordPage from "./components/ForgotPasswordPage";
+import ResetPasswordPage from "./components/ResetPasswordPage";
+import LoaderForReset from "./components/LoaderForReset";
+import { ToastContainer } from "react-toastify";
+import 'react-toastify/dist/ReactToastify.css';
+
+
 
 
 const App = () => {
   return (
     <Router>
+      <ToastContainer />
       <ConditionalNavbarAndNotification />
       <Routes>
         {/* Public Routes */}
@@ -57,7 +64,11 @@ const App = () => {
         <Route path="/examination-news" element={<ExaminationNews/>} />
         <Route path="/signup-page" element={<SignupPage/>} />
         <Route path="/user-type" element={<UserTypePage/>} />
-        <Route path="/existing-signup" element={<ExistingSignup />} />
+        <Route path="/forgot-password" element={<ForgotPasswordPage/>} />
+        <Route path="/reset-password/:token" element={<ResetPasswordPage/>} />
+        <Route path="/loader" element={<LoaderForReset/>} />
+        {/* <Route path="/existing-signup" element={<ExistingSignup />} /> */}
+        {/* <Route path="/existing-login" element={<ExistingLogin />} /> */}
 
         {/* Admin Panel Routes (Nested) */}
         <Route path="/admin-panel" element={<AdminPanel />}>
@@ -92,9 +103,10 @@ const ConditionalNavbarAndNotification = () => {
     "/examination-schedules",
     "/examination-result",
     "/examination-news",
-    "/signup-page",
+    // "/signup-page",
     "/user-type",
     "/existing-signup",
+    // "/homescreen"
   ];
 
   return routesWithNavbarAndNotification.includes(location.pathname) ? (

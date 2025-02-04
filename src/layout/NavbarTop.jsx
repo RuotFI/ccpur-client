@@ -31,14 +31,14 @@ const NavbarTop = () => {
         {/* Admissions Dropdown */}
         <div className="relative group lg:border-r border-gray-300 lg:px-3 border-solid hover:bg-white hover:text-black leading-none align-middle py-2">
           <Link to="/" className="cursor-pointer text-md">Admissions</Link>
-          <div className="absolute border-b-4 top-full px-24 py-1 left-[-900px] bg-slate-50 shadow-lg border-red-600 w-screen opacity-0 scale-y-0 transform origin-top transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-y-100 z-10">
+          <div className="absolute border-b-4 top-full px-24 py-1 left-[-920px] bg-slate-50 shadow-lg border-red-600 w-screen opacity-0 scale-y-0 transform origin-top transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-y-100 z-10">
             <div className="grid grid-cols-3">
               <div>
                 <Link to="/" className="flex items-center">
                   <img
                     src={logo2}
                     alt="Churachandpur College Logo"
-                    className="w-36 md:w-16 md:h-16 lg:w-52"
+                    className="w-36 md:w-16 md:h-16 lg:w-72"
                   />
                 </Link>
               </div>
