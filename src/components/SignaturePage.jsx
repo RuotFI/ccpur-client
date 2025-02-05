@@ -2,7 +2,7 @@ import { useState, useCallback } from "react";
 import Cropper from "react-easy-crop";
 import { CloudUpload } from "lucide-react";
 
-export default function DeclarationForm() {
+export default function SignaturePage() {
   // Passport States
   const [passportPhoto, setPassportPhoto] = useState(null);
   const [croppedPassport, setCroppedPassport] = useState(null);

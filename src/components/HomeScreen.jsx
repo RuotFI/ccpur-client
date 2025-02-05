@@ -16,7 +16,7 @@ import Footer3 from '../layout/Footer3'
 import Chatbot from '../layout/Chatbot'
 import Blog from '../layout/Blog'
 import Options from '../layout/Options'
-import LoaderForReset from './LoaderForReset'
+
 
 const HomeScreen = () => {
   return (
@@ -34,6 +34,7 @@ const HomeScreen = () => {
       {/* <About /> */}
       <CollegeActivities />
       <WelcomeScreen />
+      {/* <ExistingPassTable /> */}
       {/* <Footer /> */}
       <Footer2 />
       <Footer3 />

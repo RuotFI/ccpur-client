@@ -102,7 +102,10 @@ const NavbarTop = () => {
         <Link to="login-page" className="lg:border-r border-gray-300 lg:px-2 border-solid hover:bg-white hover:text-black leading-none align-middle py-2">
           Student Login
         </Link>
-        <Link to="/admin-login">Admin</Link>
+        <Link to="/existing-students" className=" border-gray-300 lg:px-2 border-solid hover:bg-white hover:text-black leading-none align-middle py-2">
+          Existing Students
+        </Link>
+        {/* <Link to="/admin-login">Admin</Link> */}
       </div>
       </div>
       

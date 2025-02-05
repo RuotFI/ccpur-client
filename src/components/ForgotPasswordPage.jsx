@@ -19,7 +19,7 @@ const ForgotPasswordPage = () => {
     setError("");
 
     try {
-      const response = await axios.post("http://localhost:5000/forgot-password", { email });
+      const response = await axios.post("http://localhost:5000/api/user/forgotpassword", { email });
       
       // Check if the response is what you expect (you can log it for debugging)
       console.log("Response data:", response.data);

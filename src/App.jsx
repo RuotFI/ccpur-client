@@ -1,5 +1,10 @@
 import React from "react";
-import { BrowserRouter as Router, Routes, Route, useLocation } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Routes,
+  Route,
+  useLocation,
+} from "react-router-dom";
 import Navbar from "./components/Navbar";
 // import Notification from "./layout/Notification";
 import HomeScreen from "./components/HomeScreen";
@@ -34,39 +39,55 @@ import ForgotPasswordPage from "./components/ForgotPasswordPage";
 import ResetPasswordPage from "./components/ResetPasswordPage";
 import LoaderForReset from "./components/LoaderForReset";
 import { ToastContainer } from "react-toastify";
-import 'react-toastify/dist/ReactToastify.css';
-
-
-
+import "react-toastify/dist/ReactToastify.css";
+import ExistingStudentsForm from "./components/ExistingStudentsForm";
+import ExistingPassTable from "./components/ExistingPassTable";
+import Breadcrumb from "./layout/Breadcrump";
+import AboutUsPage from "./layout/AboutUsPage";
+import OurLegacy from "./layout/OurLegacy";
+import MainLayout from "./layout/MainLayout";
 
 const App = () => {
   return (
     <Router>
       <ToastContainer />
+
       <ConditionalNavbarAndNotification />
       <Routes>
         {/* Public Routes */}
-        <Route path="/" element={<HomeScreen />} />
-        <Route path="/marksheet" element={<MarkSheet />} />
-        <Route path="/login-page" element={<LoginPage />} />
-        <Route path="/admission-page" element={<AdmissionPage />} />
-        <Route path="/admission-form" element={<AdmissionForm />} />
-        <Route path="/exam-form" element={<ExamForm />} />
-        <Route path="/old-admission" element={<OldAdmission />} />
-        <Route path="/second-admission" element={<SecondAdmission />} />
-        <Route path="/admin-login" element={<AdminLogin />} />
-        <Route path="/footer" element={<Footer2 />} />
-        <Route path="/admission-process" element={<AdmissionProcess />} />
-        <Route path="/fee-structure" element={<FeeStructure />} />
-        <Route path="/undergraduate" element={<Undergraduate />} />
-        <Route path="/examination-schedules" element={<ExaminationSchedules />} />
-        <Route path="/examination-result" element={<ExaminationResults />} />
-        <Route path="/examination-news" element={<ExaminationNews/>} />
-        <Route path="/signup-page" element={<SignupPage/>} />
-        <Route path="/user-type" element={<UserTypePage/>} />
-        <Route path="/forgot-password" element={<ForgotPasswordPage/>} />
-        <Route path="/reset-password/:token" element={<ResetPasswordPage/>} />
-        <Route path="/loader" element={<LoaderForReset/>} />
+        <Route path="/" element={<MainLayout />}>
+          <Route index element={<HomeScreen />} />
+          <Route path="/marksheet" element={<MarkSheet />} />
+          <Route path="/login-page" element={<LoginPage />} />
+          <Route path="/admission-page" element={<AdmissionPage />} />
+          <Route path="/admission-form" element={<AdmissionForm />} />
+          <Route path="/exam-form" element={<ExamForm />} />
+          <Route path="/old-admission" element={<OldAdmission />} />
+          <Route path="/second-admission" element={<SecondAdmission />} />
+          <Route path="/admin-login" element={<AdminLogin />} />
+          <Route path="/footer" element={<Footer2 />} />
+          <Route path="/admission-process" element={<AdmissionProcess />} />
+          <Route path="/fee-structure" element={<FeeStructure />} />
+          <Route path="/undergraduate" element={<Undergraduate />} />
+          <Route
+            path="/examination-schedules"
+            element={<ExaminationSchedules />}
+          />
+          <Route path="/examination-result" element={<ExaminationResults />} />
+          <Route path="/examination-news" element={<ExaminationNews />} />
+          <Route path="/signup-page" element={<SignupPage />} />
+          <Route path="/user-type" element={<UserTypePage />} />
+          <Route path="/forgot-password" element={<ForgotPasswordPage />} />
+          <Route
+            path="/reset-password/:token"
+            element={<ResetPasswordPage />}
+          />
+          <Route path="/loader" element={<LoaderForReset />} />
+          <Route path="/existing-students" element={<ExistingStudentsForm />} />
+          <Route path="/existing-students" element={<ExistingPassTable />} />
+          <Route path="/about-us" element={<AboutUsPage />} />
+          <Route path="/our-legacy" element={<OurLegacy />} />
+        </Route>
         {/* <Route path="/existing-signup" element={<ExistingSignup />} /> */}
         {/* <Route path="/existing-login" element={<ExistingLogin />} /> */}
 
@@ -106,16 +127,14 @@ const ConditionalNavbarAndNotification = () => {
     // "/signup-page",
     "/user-type",
     "/existing-signup",
+    "/about-us",
+    "/our-legacy",
+    "/existing-students",
     // "/homescreen"
   ];
 
   return routesWithNavbarAndNotification.includes(location.pathname) ? (
-    <div className="fixed top-0 w-full z-50">
-       <NavbarTop />
-      {/* <Navbar /> */}
-      <MainNavBar />
-      {/* <Footer2 /> */}
-    </div>
+    <div className="fixed top-0 w-full z-50"></div>
   ) : null;
 };
 

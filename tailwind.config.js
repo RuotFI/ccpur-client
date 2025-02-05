@@ -9,6 +9,7 @@ export default {
       animation: {
         marquee: 'marquee 10s linear infinite',
         fadeIn: "fadeIn 0.5s ease-in-out",
+        blink: "blink 1s steps(2, start) infinite",
       },
       keyframes: {
         marquee: {
@@ -19,6 +20,10 @@ export default {
         fadeIn: {
           "0%": { opacity: 0 },
           "100%": { opacity: 1 },
+        },
+        blink: {
+          "0%, 100%": { opacity: 1 },
+          "50%": { opacity: 0 },
         },
       },
     }

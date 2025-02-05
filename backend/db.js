@@ -6,7 +6,7 @@ const pool = new Pool({
   password: '1212',    // your PostgreSQL password
   host: 'localhost',   // your PostgreSQL host
   port: 5432,          // default PostgreSQL port
-  database: 'postgres'     // your database name
+  database: 'ccpur'     // your database name
 });
 
 // Function to check the DB connection

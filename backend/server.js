@@ -3,11 +3,10 @@ const cors = require('cors');
 const dotenv = require("dotenv");
 const router = require('./router/route');
 
-const app = express();
 
 // Initialize dotenv to access environment variable
-dotenv.config();
 const port = process.env.PORT;
+const app = express();
 
 //Middleware
 app.use(cors());
@@ -29,6 +28,6 @@ app.use((err, req, res, next) => {
   res.status(500).json({ error: "Internal Server Error" });
 });
 
-app.listen(5000, () =>{
+app.listen(port, () =>{
   console.log(`Server is running on port 5000`);
 });

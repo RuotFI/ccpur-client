@@ -65,9 +65,9 @@ const MainNavBar = () => {
     {
       id: 1,
       title: "About Us",
-      link: "/about",
+      link: "/about-us",
       submenu: [
-        { title: "Our Legacy", link: "/about/mission" },
+        { title: "Our Legacy", link: "/our-legacy" },
         { title: "Leadership", link: "/about/team" },
         { title: "Acedemic Advisory Board", link: "/about/history" },
         { title: "Industry Advisory Board", link: "/about/history" },
@@ -79,7 +79,7 @@ const MainNavBar = () => {
     {
       id: 2,
       title: "Programs",
-      link: "/programs",
+      link: "/signup-page",
       submenu: [
         { title: "Undergraduate", link: "/undergraduate" },
         { title: "Postgraduate", link: "/programs/postgraduate" },
@@ -176,9 +176,9 @@ const MainNavBar = () => {
               key={button.id}
               className="relative hidden group h-full hover:text-gray-100 active:text-white hover:bg-sky-700 last:border-none  hover:rounded-t-lg lg:flex items-center"
             >
-              <button className="text-gray-900 active:hover:text-white border-gray-700 border-r  px-3 font-semibold hover:text-gray-100">
+              <Link to={button.link} className="text-gray-900 active:hover:text-white border-gray-700 border-r  px-3 font-semibold hover:text-gray-100">
                 {button.title}
-              </button>
+              </Link>
 
               {button.submenu && (
                 <div className="fixed border-b-4 border-red-600 top-[94px] left-[400px] bg-sky-700 shadow-lg w-[895px] opacity-0 scale-y-0 transform origin-top transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-y-100">
