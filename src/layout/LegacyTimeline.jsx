@@ -1,4 +1,4 @@
-import AboutUsLink from "./AboutUsLink";
+// import AboutUsLink from "./AboutUsLink";
 
 const legacyData = [
   {
@@ -56,7 +56,7 @@ const legacyData = [
 const OurLegacyPage = () => {
   return (
     <div className="w-full bg-gray-100 pt-6 lg:pt-16 px-3 lg:px-20">
-      <AboutUsLink />
+      {/* <AboutUsLink /> */}
       {/* Header */}
       <div className="flex mt-6 flex-col">
         <div>

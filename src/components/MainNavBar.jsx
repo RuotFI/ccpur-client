@@ -46,7 +46,6 @@ const MainNavBar = () => {
         { title: "Student Union", link: "/student-union" },
       ],
     },
-    // Other nav buttons...
     {
       id: 2,
       title: "Programs",
@@ -76,19 +75,9 @@ const MainNavBar = () => {
       submenu: [
         { title: "Department News", link: "/department-news" },
         { title: "Announcement", link: "/announcement" },
-        // { title: "Overall", link: "/overall" },
       ],
     },
-    {
-      id: 5,
-      title: "Examination",
-      link: "/examination",
-      submenu: [
-        { title: "Examination Schedules", link: "/examination-schedules" },
-        { title: "Examination Result", link: "/examination-result" },
-        { title: "Examination News", link: "/examination-news" },
-      ],
-    },
+
   ];
 
   return (
@@ -108,17 +97,17 @@ const MainNavBar = () => {
           </div>
         </Link>
 
-        <div className="flex items-center gap-2 h-16">
+        <div className="flex items-center pt-1 gap-2 h-16">
           {navButton.map((button) => (
             <div
               key={button.id}
-              className="relative hidden group h-full hover:text-gray-100 active:text-white hover:bg-sky-700 last:border-none  hover:rounded-t-lg lg:flex items-center"
+              className={`relative hidden group h-full hover:text-gray-100 active:text-white ${button.title === "About Us" ? "hover:bg-sky-700" : ""}  last:border-none  hover:rounded-t-lg lg:flex items-center`}
             >
-              <Link to={button.link} className="text-gray-900 active:hover:text-white px-2 border-gray-700 font-semibold hover:text-gray-100">
+              <Link to={button.link} className={`text-gray-900 active:hover:text-white px-2 border-gray-700 font-semibold ${button.title === "About Us" ? "hover:text-gray-100" : "hover:text-sky-700"}`}>
                 {button.title}
               </Link>
 
-              {button.submenu && (
+              {button.title === "About Us" && button.submenu && (
                 <div className="fixed border-b-4 z-50 border-red-600 top-[94px] left-0 w-max lg:w-full bg-sky-700 shadow-lg opacity-0 scale-y-0 transform origin-top transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-y-100">
                 <div className="grid grid-cols-3 p-4">
                   {button.submenu.map((sub, index) => (

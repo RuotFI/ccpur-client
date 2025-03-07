@@ -89,7 +89,7 @@ const App = () => {
           <Route path="/committee" element={<StatutoryBodies />} />
           <Route path="/student-union" element={<StudentUnion />} />
           <Route path="/research-publication" element={<ResearchPublication />} />
-          <Route path="/college-news" element={<CollegeNews />} />
+          <Route path="/college-news" element={<CollegeNews/>} />
 
         </Route>
 
