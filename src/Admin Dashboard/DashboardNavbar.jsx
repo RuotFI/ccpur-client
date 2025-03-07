@@ -32,17 +32,6 @@ const DashboardNavbar = () => {
 
       {/* Right Side Icons */}
       <div className="flex items-center space-x-4">
-        
-        {/* <div className="flex items-center bg-gray-100 px-4 py-2 rounded-md">
-          <FaCalendarAlt className="text-gray-600 mr-2" />
-          <DatePicker
-            selected={selectedDate}
-            onChange={(date) => setSelectedDate(date)}
-            dateFormat="yyyy/MM/dd"
-            className="bg-transparent outline-none cursor-pointer"
-          />
-        </div> */}
-
         {/* Academic Year Picker */}
         <div className="flex items-center bg-gray-100 px-4 py-2 rounded-md">
           <FaCalendarAlt className="text-gray-600 mr-2" />

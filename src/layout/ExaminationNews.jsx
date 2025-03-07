@@ -35,7 +35,7 @@ const ExaminationNews = () => {
       : newsData.filter((news) => news.category === activeCategory);
 
   return (
-    <div className="min-h-screen mt-24 bg-gray-50 py-10 px-4">
+    <div className="min-h-screen mt-12 bg-gray-50 py-10 px-4">
       {/* Page Header */}
       <h1 className="text-4xl font-bold text-gray-800 text-center mb-8">
         Examination News

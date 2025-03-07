@@ -1,8 +1,9 @@
-import React, { useState } from "react";
+// import React, { useState } from "react";
 import { ToastContainer, toast } from "react-toastify";
 import "react-toastify/dist/ReactToastify.css";
 import { HiBellAlert } from "react-icons/hi2";
 import logo from "../assets/dl-logo.png"
+import { useState } from "react";
 
 const ComingSoon = () => {
   const [email, setEmail] = useState("");

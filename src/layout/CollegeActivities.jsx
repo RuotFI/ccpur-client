@@ -6,8 +6,8 @@ import { Link } from "react-router-dom";
 
 const CollegeActivities = () => {
   return (
-    <div className="w-full bg-gray-100 py-16">
-      <h2 className="font-bold text-xl md:text-2xl lg:text-3xl text-center pb-10">
+    <div className="w-full bg-gray-100 py-8">
+      <h2 className="font-bold text-xl md:text-2xl lg:text-3xl text-center pb-10 uppercase">
           <span className="text-sky-500 font-medium">Campus Life</span> & Student Engagement
         </h2>
       <div className="flex items-center justify-center">

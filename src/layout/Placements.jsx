@@ -1,15 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import "swiper/css";
 import "swiper/css/navigation";
 import "swiper/css/pagination";
 import { Navigation, Pagination } from "swiper/modules";
 
-const tabs = [
-  "Ccpur College International Stars",
-  "Startups",
-  "Research Work & Patents",
-];
+const tabs = ["Ccpur College Stars", "Research Work & Patents"];
 
 const placementsData = [
   {
@@ -50,64 +46,63 @@ const Placement = () => {
   const [activeTab, setActiveTab] = useState(0);
 
   return (
-    <div className="bg-gray-100 py-8 px-6">
-      {/* <h1 className="text-center text-2xl font-bold mb-6">Placements</h1> */}
+    <div className=" py-8 px-6">
+      <div>
+        <div></div>
+        <div className="flex lg:justify-center overflow-x-auto gap-2 lg:gap-3 mb-6">
+          {tabs.map((tab, index) => (
+            <button
+              key={index}
+              onClick={() => setActiveTab(index)}
+              className={`flex-shrink-0 px-4 py-2 text-sm font-semibold ${
+                activeTab === index
+                  ? "bg-slate-200 text-gray-700 rounded shadow"
+                  : "bg-slate-100 text-gray-700 rounded shadow"
+              }`}
+            >
+              {tab}
+            </button>
+          ))}
+        </div>
 
-      {/* Tabs */}
-      <div className="flex lg:justify-center overflow-x-auto gap-2 lg:gap-3 mb-6">
-        {tabs.map((tab, index) => (
-          <button
-            key={index}
-            onClick={() => setActiveTab(index)}
-            className={`flex-shrink-0 px-4 py-2 text-sm font-semibold ${
-              activeTab === index
-                ? "bg-red-500 text-white rounded"
-                : "bg-gray-200 text-gray-800 rounded hover:bg-gray-300"
-            }`}
-          >
-            {tab}
-          </button>
-        ))}
-      </div>
-
-      {/* Swiper Slider */}
-      <Swiper
-        modules={[Navigation, Pagination]}
-        spaceBetween={20}
-        slidesPerView={1}
-        navigation
-        
-        // pagination={{ clickable: true }}
-        breakpoints={{
-          640: { slidesPerView: 1 },
-          768: { slidesPerView: 2 },
-          1024: { slidesPerView: 3 },
-          1280: { slidesPerView: 4 },
-        }}
-        className="max-w-screen-lg mx-auto"
-      >
-        {placementsData.map((person, index) => (
-          <SwiperSlide key={index}>
-            <div className="bg-white rounded-lg shadow-lg overflow-hidden text-center">
-              <img
-                src={person.image}
-                alt={person.name}
-                className="w-full lg:h-52 h-60 object-cover"
-              />
-              <div className="p-4">
-                <h3 className="font-bold text-lg">{person.name}</h3>
-                <p className="text-gray-500 text-sm">{person.course}</p>
-                <p className="text-blue-600 text-xl font-semibold">
-                  {person.ctc}
-                </p>
-                <p className="text-gray-700 text-sm">
-                  Placed at {person.company}
-                </p>
+        {/* Swiper Slider */}
+        <Swiper
+          modules={[Navigation, Pagination]}
+          spaceBetween={20}
+          slidesPerView={1}
+          navigation
+          // pagination={{ clickable: true }}
+          breakpoints={{
+            640: { slidesPerView: 1 },
+            768: { slidesPerView: 2 },
+            1024: { slidesPerView: 2 },
+            1280: { slidesPerView: 2 },
+          }}
+          className="max-w-2xl mx-auto"
+        >
+          {placementsData.map((person, index) => (
+            <SwiperSlide key={index}>
+              <div className="bg-white rounded-lg border-2 shadow-lg overflow-hidden text-center">
+                <img
+                  src={person.image}
+                  alt={person.name}
+                  className="w-full lg:h-52 h-60 object-cover"
+                />
+                <div className="p-4">
+                  <h3 className="font-bold text-lg">{person.name}</h3>
+                  <p className="text-gray-500 text-sm">{person.course}</p>
+                  <p className="text-blue-600 text-xl font-semibold">
+                    {person.ctc}
+                  </p>
+                  <p className="text-gray-700 text-sm">
+                    Placed at {person.company}
+                  </p>
+                </div>
               </div>
-            </div>
-          </SwiperSlide>
-        ))}
-      </Swiper>
+            </SwiperSlide>
+          ))}
+        </Swiper>
+      </div>
     </div>
   );
 };

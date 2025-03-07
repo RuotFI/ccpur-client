@@ -1,44 +1,28 @@
-import React, { useEffect, useState } from "react";
-import { Link, useNavigate } from "react-router-dom";
-import logo2 from "../assets/ccpurlogo2.png";
+
+import { Link } from "react-router-dom";
+import logo from "../assets/ccpurlogo.png";
+import NavTopMobileMenu from "./NavTopMobileMenu";
 
 const NavbarTop = () => {
-  const navigate = useNavigate();
+ 
 
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  useEffect(() => {
-    const user = localStorage.getItem("user");
-    if (user) {
-      setIsLoggedIn(true);
-    }
-  }, []);
-
-  const loginHandler = () => {
-    navigate("/login-page");
-  };
-
-  const logoutHandler = () => {
-    localStorage.removeItem("user");
-    setIsLoggedIn(false);
-    navigate("/login-page");
-  };
-
-  return (
-    <div className="bg-sky-700 hidden lg:block w-full">
-      <div className="">
-      <div className="flex items-center h-[100%] text-white w-full text-sm font-medium md:justify-end lg:justify-end lg:px-20 gap-3 px-3 lg:gap-1">
+  return (    
+    <div>
+      <NavTopMobileMenu />
+      <div className="bg-blue-600 hidden lg:block w-full">
+      <div className="w-full">
+      <div className="flex items-center h-[100%] text-gray-100 w-full text-sm font-medium md:justify-end lg:justify-end lg:px-6 gap-3 px-3 lg:gap-1">
         {/* Admissions Dropdown */}
-        <div className="relative group lg:border-r border-gray-300 lg:px-3 border-solid hover:bg-white hover:text-black leading-none align-middle py-2">
+        <div className="relative group lg:px-3 border-solid hover:bg-white hover:text-black leading-none align-middle py-2">
           <Link to="/" className="cursor-pointer text-md">Admissions</Link>
-          <div className="absolute border-b-4 top-full px-24 py-1 left-[-920px] bg-slate-50 shadow-lg border-red-600 w-screen opacity-0 scale-y-0 transform origin-top transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-y-100 z-10">
-            <div className="grid grid-cols-3">
-              <div>
-                <Link to="/" className="flex items-center">
+          <div className="absolute lg:px-12 bg-slate-100 right-[-420px] border-b-4 top-full py-1 shadow-lg border-red-600 w-screen opacity-0 scale-y-0 transform origin-top transition-all duration-300 ease-in-out group-hover:opacity-100 group-hover:scale-y-100 z-10">
+            <div className="grid w-full grid-cols-3">
+              <div className="">
+                <Link to="/" className="flex items-center"> 
                   <img
-                    src={logo2}
+                    src={logo}
                     alt="Churachandpur College Logo"
-                    className="w-36 md:w-16 md:h-16 lg:w-72"
+                    className="w-36 lg:w-24"
                   />
                 </Link>
               </div>
@@ -61,12 +45,6 @@ const NavbarTop = () => {
                 >
                   Fee Structure
                 </Link>
-                {/* <a
-                  href="https://scholarships.gov.in/" target="_blank"
-                  className="block px-4 py-2 text-sky-700 hover:underline"
-                >
-                  Scholarships
-                </a> */}
                 <Link
                   to="/"
                   className="block px-4 py-2 text-sky-700 hover:underline"
@@ -80,36 +58,32 @@ const NavbarTop = () => {
                   Download Brochures
                 </Link>
               </div>
+              
             </div>
           </div>
         </div>
-
-        <a href="https://scholarships.gov.in/" target="_blank" className="lg:border-r border-gray-300 lg:px-2 border-solid hover:bg-white hover:text-black leading-none align-middle py-2">
+        <a href="https://scholarships.gov.in/" target="_blank" className=" border-gray-300 lg:px-2 border-solid hover:bg-white hover:text-black leading-none align-middle py-2">
           Scholarships
         </a>
-        {/* <button className="lg:border-r border-gray-300 lg:px-3 border-solid hover:bg-white hover:text-black leading-none align-middle py-2">
-          Schools
-        </button> */}
-        <button className="lg:border-r border-gray-300 lg:px-2 border-solid hover:bg-white hover:text-black leading-none align-middle py-2">
+        <button className=" border-gray-300 lg:px-2 border-solid hover:bg-white hover:text-black leading-none align-middle py-2">
           Alumni
         </button>
-        {/* <button className="lg:border-r border-gray-300 lg:px-3 border-solid hover:bg-white hover:text-black leading-none align-middle py-2">
-          Career
-        </button> */}
-        <button className="lg:border-r border-gray-300 lg:px-2 border-solid hover:bg-white hover:text-black leading-none align-middle py-2">
+        <button className=" border-gray-300 lg:px-2 border-solid hover:bg-white hover:text-black leading-none align-middle py-2">
           Online Payment
         </button>
-        <Link to="login-page" className="lg:border-r border-gray-300 lg:px-2 border-solid hover:bg-white hover:text-black leading-none align-middle py-2">
+        <Link to="login-page" className=" border-gray-300 lg:px-2 border-solid hover:bg-white hover:text-black leading-none align-middle py-2">
           Student Login
         </Link>
-        <Link to="/existing-students" className=" border-gray-300 lg:px-2 border-solid hover:bg-white hover:text-black leading-none align-middle py-2">
+        {/* <Link to="/existing-students" className=" border-gray-300 lg:px-2 border-solid hover:bg-white hover:text-black leading-none align-middle py-2">
           Existing Students
-        </Link>
+        </Link> */}
         {/* <Link to="/admin-login">Admin</Link> */}
       </div>
       </div>
       
     </div>
+    </div>
+    
   );
 };
 

@@ -4,7 +4,7 @@ const Advantage = () => {
   return (
     <div className="w-full px-4 lg:px-20">
       <div className="text-center my-8">
-        <h2 className="font-bold text-xl md:text-2xl lg:text-3xl">
+        <h2 className="font-bold text-xl md:text-2xl lg:text-3xl uppercase">
           <span className="text-sky-500 font-medium">Advantage of</span> Churachandpur College
         </h2>
         <div className="flex items-center justify-center">

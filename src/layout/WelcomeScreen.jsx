@@ -1,9 +1,9 @@
-import React from "react";
+// import React from "react";
 
 const WelcomeScreen = () => {
   return (
     <div className="w-full h-auto py-6 lg:py-14 px-6  flex flex-col items-center justify-center space-y-6">
-      <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl">
+      <h2 className="font-bold text-center text-xl md:text-2xl lg:text-3xl uppercase">
           <span className="text-sky-500 font-medium">Welcome</span> to Churachandpur College
         </h2>
       <p className="w-full text-justify text-sm lg:max-w-5xl text-gray-700 font-light md:text-lg opacity-90 hover:opacity-100 transition-opacity duration-300">

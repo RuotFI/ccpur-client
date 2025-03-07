@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import Footer2 from "./Footer2";
 
@@ -10,17 +10,11 @@ const Undergraduate = () => {
     setDropdown(dropdown === prev ? null : prev);
   };
 
-  //   const [openMenu, setOpenMenu] = useState(null);
-
-  // Toggle dropdown menus
-  //   const toggleMenu = (menu) => {
-  //     setOpenMenu(openMenu === menu ? null : menu);
-  //   };
 
   return (
-    <div className="w-full h-screen bg-white lg:px-12 pt-14 lg:pt-28 ">
-      <h2 className="font-bold text-2xl md:text-2xl py-6 lg:text-3xl border-b px-4 text-center">
-        <span className="text-sky-500 font-medium ">Undergraduate</span>{" "}
+    <div className="w-full h-screen bg-white lg:px-12 pt-3 lg:pt-12 ">
+      <h2 className="font-bold text-2xl md:text-2xl py-6 lg:text-3xl border-b px-4 lg:text-center">
+        <span className="text-sky-500 font-medium">Undergraduate</span>{" "}
         Programs
       </h2>
       <div className="flex flex-col mt-4 lg:flex lg:flex-row bg-white w-full justify-around text-center gap-2 p-2">
@@ -31,7 +25,7 @@ const Undergraduate = () => {
           <div className="flex w-full lg:w-[500px] gap-2 flex-col items-start ">
             <button
               onClick={() => handleDropdown("Anthropology")}
-              className="text-start flex items-center gap-12 justify-between font-semibold text-gray-600 bg-white shadow-lg  border-sky-300 px-4 border rounded-full w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               1. Anthropology (For Arts Background )
               {dropdown === "Anthropology" ? (
@@ -45,13 +39,13 @@ const Undergraduate = () => {
                 <p className="text-justify text-sm p-2 text-gray-500">
                   Explore the rich diversity of human cultures and societies
                   with our comprehensive Anthropology courses, tailored to
-                  enhance your understanding of humanity's past and present.
+                  enhance your understanding of humanity&apos;s past and present.
                 </p>
               </div>
             )}
             <button
               onClick={() => handleDropdown("Economics")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               2. Economics
               {dropdown === "Economics" ? (
@@ -70,7 +64,7 @@ const Undergraduate = () => {
             )}
             <button
               onClick={() => handleDropdown("Education")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               3. Education
               {dropdown === "Education" ? (
@@ -89,7 +83,7 @@ const Undergraduate = () => {
             )}
             <button
               onClick={() => handleDropdown("English")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               4. English
               {dropdown === "English" ? (
@@ -107,7 +101,7 @@ const Undergraduate = () => {
             )}
             <button
               onClick={() => handleDropdown("Geography")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               5. Geography (For Arts Background ){" "}
               {dropdown === "Geography" ? (
@@ -125,7 +119,7 @@ const Undergraduate = () => {
             )}
             <button
               onClick={() => handleDropdown("History")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               6. History
               {dropdown === "History" ? (
@@ -143,7 +137,7 @@ const Undergraduate = () => {
             )}
             <button
               onClick={() => handleDropdown("Mathematics")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               7. Mathematics (For Arts Background ){" "}
               {dropdown === "Mathematics" ? (
@@ -161,7 +155,7 @@ const Undergraduate = () => {
             )}
             <button
               onClick={() => handleDropdown("Manipuri")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               8. Manipuri
               {dropdown === "Manipuri" ? (
@@ -179,7 +173,7 @@ const Undergraduate = () => {
             )}
             <button
               onClick={() => handleDropdown("Mizo")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               9. Mizo
               {dropdown === "Mizo" ? (
@@ -197,7 +191,7 @@ const Undergraduate = () => {
             )}
             <button
               onClick={() => handleDropdown("Political-Science")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               10. Political Science
               {dropdown === "Political-Science" ? (
@@ -215,7 +209,7 @@ const Undergraduate = () => {
             )}
             <button
               onClick={() => handleDropdown("Sociology")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               11. Sociology
               {dropdown === "Sociology" ? (
@@ -233,7 +227,7 @@ const Undergraduate = () => {
             )}
             <button
               onClick={() => handleDropdown("Statistics")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               12. Statistics
               {dropdown === "Statistics" ? (
@@ -258,9 +252,9 @@ const Undergraduate = () => {
           <div className="flex flex-col gap-2 w-full lg:w-[500px] items-start ">
             <button
               onClick={() => handleDropdown("Anthropology-Science")}
-              className="text-start flex gap-12 items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold whitespace-nowrap text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
-              1. Anthropology (For Science Background ){" "}
+               1. Anthropology (For Science Background ){" "}
               {dropdown === "Anthropology-Science" ? (
                 <FaChevronUp className="w-3 h-3" />
               ) : (
@@ -278,7 +272,7 @@ const Undergraduate = () => {
             )}
             <button
               onClick={() => handleDropdown("Botany")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               2. Botany
               {dropdown === "Botany" ? (
@@ -296,7 +290,7 @@ const Undergraduate = () => {
             )}
             <button
               onClick={() => handleDropdown("Chemistry")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               3. Chemistry
               {dropdown === "Chemistry" ? (
@@ -314,7 +308,7 @@ const Undergraduate = () => {
             )}
             <button
               onClick={() => handleDropdown("Economics-Science")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               4. Economics (For Science Background ){" "}
               {dropdown === "Economics-Science" ? (
@@ -332,7 +326,7 @@ const Undergraduate = () => {
             )}
             <button
               onClick={() => handleDropdown("Geography-Science")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               5. Geography (For Science Background ){" "}
               {dropdown === "Geography-Science" ? (
@@ -350,7 +344,7 @@ const Undergraduate = () => {
             )}
             <button
               onClick={() => handleDropdown("Mathematics-Science")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               6. Mathematics (For Science Background ){" "}
               {dropdown === "Mathematics-Science" ? (
@@ -368,7 +362,7 @@ const Undergraduate = () => {
             )}
             <button
               onClick={() => handleDropdown("Physics")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               7. Physics
               {dropdown === "Physics" ? (
@@ -386,7 +380,7 @@ const Undergraduate = () => {
             )}
             <button
               onClick={() => handleDropdown("Statistics-Science")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300  px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               8. Statistics (For Science Background ){" "}
               {dropdown === "Statistics-Science" ? (
@@ -404,7 +398,7 @@ const Undergraduate = () => {
             )}
             <button
               onClick={() => handleDropdown("Zoology")}
-              className="text-start flex items-center bg-white shadow-lg rounded-full border border-sky-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
+              className="text-start flex items-center bg-white border-b border-gray-300 px-4 justify-between font-semibold text-gray-600 w-full py-3"
             >
               9. Zoology
               {dropdown === "Zoology" ? (

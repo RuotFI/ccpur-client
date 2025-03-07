@@ -1,42 +1,20 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import { Link, Outlet } from "react-router-dom";
+
 import {
-  FaChalkboardTeacher,
-  FaGraduationCap,
-  FaBookOpen,
-  FaMoneyBillWave,
-  FaUserTie,
-  FaClipboardList,
-  FaUsers,
-  FaRegCalendarAlt,
-  FaChartLine,
-  FaReceipt,
-  FaFileAlt,
-  FaChartPie,
-  FaRegCalendarTimes,
-} from "react-icons/fa";
-import {
-  MdOutlineAssignment,
-  MdCardMembership,
-  MdAccountBalance,
+  
 } from "react-icons/md";
 import { LuLayoutDashboard } from "react-icons/lu";
 import { FiChevronDown, FiChevronRight } from "react-icons/fi"; // Chevron icons
 import logo from "../assets/ccpurlogo.png";
 // import { LuLayoutDashboard } from "react-icons/lu";
-import { PiBriefcaseLight, PiGraduationCapLight } from "react-icons/pi";
+
 import {
-  TbMoneybag,
   TbUserBolt,
-  TbUserExclamation,
-  TbUsersGroup,
   TbUserShield,
 } from "react-icons/tb";
-import { IoPeople, IoPeopleOutline } from "react-icons/io5";
-import { BsPeople } from "react-icons/bs";
-import { HiOutlineBuildingOffice } from "react-icons/hi2";
-import { CiCalendarDate } from "react-icons/ci";
-import { AiOutlineSolution } from "react-icons/ai";
+import { IoPeopleOutline } from "react-icons/io5";
+
 import Academics from "./Academics";
 import DashboardNavbar from "./DashboardNavbar";
 import Peoples from "./Peoples";

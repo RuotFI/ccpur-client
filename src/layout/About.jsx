@@ -1,4 +1,3 @@
-import React from "react";
 import ccpur from "../assets/ccpur.jpg";
 
 const About = () => {

@@ -1,26 +1,11 @@
-import React, { useEffect, useState } from "react";
+// import React, { useEffect, useState } from "react";
+import { useState } from "react";
 import AdmissionProcess from "../layout/AdmissionProcess";
 import FeeStructure from "../layout/FeeStructure";
 import SignaturePage from "./SignaturePage";
-import jsPDF from "jspdf";
-import html2canvas from "html2canvas";
-
-// import InputField from "./InputField";
 
 const AdmissionForm = () => {
 
-  const generatePDF = () => {
-    const input = document.getElementById("admission-form");
-    html2canvas(input, { scale: 2 }).then((canvas) => {
-      const imgData = canvas.toDataURL("image/png");
-      const pdf = new jsPDF("p", "mm", "a4");
-      const imgWidth = 210;
-      const imgHeight = (canvas.height * imgWidth) / canvas.width;
-      pdf.addImage(imgData, "PNG", 0, 0, imgWidth, imgHeight);
-      pdf.save("admission-form.pdf");
-    });
-  };
-  
 
   const programs = {
     BA: [
@@ -96,20 +81,7 @@ const AdmissionForm = () => {
   //   setSession(`${currentYear}-${nextYear}`);
   // }, []);
 
-  const handleChange = (e) => {
-    const { name, value, type, checked } = e.target;
-    if (type === "checkbox") {
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: checked,  // Set to true or false depending on whether the checkbox is checked
-      }));
-    } else {
-      setFormData((prevData) => ({
-        ...prevData,
-        [name]: value,  // For other fields, use the regular value
-      }));
-    }
-  };
+  
    
 
   const handleSubmit = async (e) => {

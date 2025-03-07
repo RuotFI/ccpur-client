@@ -1,6 +1,6 @@
-import React, { useState } from "react";
-import { Fa42Group } from "react-icons/fa6";
-import { CgPerformance, CgReadme, CgRemote, CgSmartphoneChip } from "react-icons/cg";
+import { useState } from "react";
+
+import { CgReadme, CgRemote, CgSmartphoneChip } from "react-icons/cg";
 
 const FeeStructure = () => {
   const [activeTab, setActiveTab] = useState(1); // Default active tab
@@ -11,7 +11,7 @@ const FeeStructure = () => {
             <span className="text-sky-500 font-medium ">Fee</span> Structure
           </h2>
       {/* Tabs */}
-      <div className="flex items-start w-full justify-start">
+      <div className="lg:flex items-start w-full justify-start">
         <div className="flex flex-col border">
           <button
             className={`px-4 flex items-center gap-4 py-3 flex-1 text-start border w-80 font-bold text-xl ${

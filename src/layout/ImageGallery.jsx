@@ -1,9 +1,8 @@
-import React from "react";
 import Slider from "react-slick";
 import ReactPlayer from "react-player";
 import { FcPrevious } from "react-icons/fc";
 import { FcNext } from "react-icons/fc";
-import { TbHandFinger } from "react-icons/tb";
+
 
 const PrevArrow = ({ className, onClick }) => (
   <div
@@ -64,7 +63,7 @@ const ImageGallery = () => {
         {/* Video */}
         <div className="flex flex-col w-full lg:w-3/6 justify-center items-center">
           <div>
-            <h2 className="font-semibold text-gray-800 text-3xl py-6">Video</h2>
+            <h2 className="font-semibold text-gray-800 text-3xl py-6 uppercase">Video</h2>
           </div>
 
           <ReactPlayer
@@ -75,30 +74,16 @@ const ImageGallery = () => {
           />
         </div>
         <div className="w-full lg:w-2/3">
-          <h2 className="font-bold text-3xl md:text-2xl py-6 lg:text-3xl text-center">
+          <h2 className="font-bold text-3xl md:text-2xl py-6 lg:text-3xl text-center uppercase">
             <span className="text-sky-500 font-medium ">Image</span> Gallery
           </h2>
-          {/* <div className="relative lg:hidden">
-            <h2 className="text-white font-semibold z-10 top-32 left-44 absolute text-md lg:hidden">
-              Swipe
-              <TbHandFinger className="animate-marquee w-12 h-12" />
-            </h2>
-          </div> */}
           <Slider className="" {...settings}>
-            <img
-              src="https://www.churachandpurcollege.edu.in/g_file/S250524104939.jpg"
-              className="hover:opacity-80 object-cover w-[100%] h-[250px]"
-            />
             <img
               src="https://www.churachandpurcollege.edu.in/g_file/S221222114644.jpg"
               className="hover:opacity-80 object-cover w-[100%] h-[250px]"
             />
             <img
               src="https://www.churachandpurcollege.edu.in/g_file/S20102215289.jpg"
-              className="hover:opacity-80 object-cover w-[100%] h-[250px]"
-            />
-            <img
-              src="https://www.churachandpurcollege.edu.in/g_file/S250524104939.jpg"
               className="hover:opacity-80 object-cover w-[100%] h-[250px]"
             />
             <img

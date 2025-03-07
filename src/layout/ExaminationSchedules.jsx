@@ -1,8 +1,7 @@
-import React from "react";
 import Footer2 from "./Footer2";
 
 const ExaminationSchedules = () => {
-  // Schedule data categorized by program
+  
   const scheduleData = [
     {
       program: "Bachelor of Arts (B.A)",

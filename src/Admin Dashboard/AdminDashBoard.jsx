@@ -1,13 +1,11 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import {
   FaChalkboardTeacher,
   FaCoins,
   FaGraduationCap,
   FaBook,
-  FaBuilding,
-  FaLink,
   FaUserTie,
-  FaBell,
+
 } from "react-icons/fa";
 import { FaPerson } from "react-icons/fa6";
 import { Calendar, momentLocalizer } from "react-big-calendar";
